@@ -1,3 +1,4 @@
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -31,6 +32,8 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     initBatter();
     initAdd();
+
+    getDeviceInfo();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -131,6 +134,17 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
+  }
+
+
+  void getDeviceInfo() async {
+    // final deviceInfoPlugin = DeviceInfoPlugin();
+    // final deviceInfo = await deviceInfoPlugin.deviceInfo;
+    // final allInfo = deviceInfo.data;
+
+    var sn = await _moonFlutterPlugin.getSN();
+
+    print('>>>>>> $sn');
   }
 
 }

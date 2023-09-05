@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moon_flutter_plugin_example">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
    <application
         android:label="moon_flutter_plugin_example"
         android:name="${applicationName}"

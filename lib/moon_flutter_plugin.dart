@@ -8,6 +8,10 @@ class MoonFlutterPlugin {
     return MoonFlutterPluginPlatform.instance.getPlatformVersion();
   }
 
+  Future<String?> getPlatFormSN() {
+    return MoonFlutterPluginPlatform.instance.getBatteryLevel();
+  }
+
 
   Future<String?> getBatteryLevel() {
     return MoonFlutterPluginPlatform.instance.getBatteryLevel();
@@ -20,5 +24,10 @@ class MoonFlutterPlugin {
   Future<Uint8List?> getAssetImage(String target) {
     return MoonFlutterPluginPlatform.instance.getResource(target);
   }
+  Future<String?> getSN() {
+    return MoonFlutterPluginPlatform.instance.getSN();
+  }
+
+
 
 }

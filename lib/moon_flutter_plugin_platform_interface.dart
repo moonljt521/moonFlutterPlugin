@@ -40,4 +40,8 @@ abstract class MoonFlutterPluginPlatform extends PlatformInterface {
   Future<Uint8List?> getResource(String resourceName) {
     throw UnimplementedError('add() has not been implemented.');
   }
+
+  Future<String?> getSN() {
+    throw UnimplementedError('getSN() has not been implemented.');
+  }
 }

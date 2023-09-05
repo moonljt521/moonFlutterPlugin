@@ -37,4 +37,10 @@ class MethodChannelMoonFlutterPlugin extends MoonFlutterPluginPlatform {
     return batter;
   }
 
+  @override
+  Future<String?> getSN() async{
+    final sn = await methodChannel.invokeMethod<String?>('getSN');
+    return sn;
+  }
+
 }

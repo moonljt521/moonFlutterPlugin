@@ -48,6 +48,12 @@ class MoonFlutterPlugin: FlutterPlugin, MethodCallHandler {
       if(a1 == null) return
       val by = getImageAsBytes(a1)
       result.success(by)
+    } else if (call.method == "getSN") {
+
+      val sn = SystemProperties.getSN()
+      result.success(sn)
+
+
     }
 
     else{
